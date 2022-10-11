@@ -14,12 +14,13 @@ public class SearchDefinitions extends CommonDefinition {
     @Before
     public void initData(Scenario sc){
         createAndroidDriver(sc.getName());
-        getPageCollection().getMainPage().getLoginPage();
+
     }
 
     @Given("User input dipo tower keyword")
     public void UserInputDipoTowerKeyword(){
         System.out.println("Testing input search key");
+        getPageCollection().getMainPage().getLoginPage();
     }
 
     @When("User sorting the price from the lowest price")
@@ -32,8 +33,8 @@ public class SearchDefinitions extends CommonDefinition {
         System.out.println("User get top 3 the lowest price of the border house");
     }
 
-    //@After
-    //public void dispathDriver(){
-    //    tearDown();
-    //}
+    @After
+    public void dispathDriver(){
+        tearDown();
+    }
 }

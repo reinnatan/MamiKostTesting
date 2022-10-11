@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import mamikost.config.DriverBuilderFactory;
 import mamikost.config.DriverType;
 import mamikost.page.PageCollection;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 
@@ -15,12 +16,13 @@ public class CommonDefinition {
     }
     private PageCollection pageCollection;
 
+
     public void createAndroidDriver(String scenario) {
         driver.set(DriverBuilderFactory.getDriver(DriverType.ANDROID).createDriver(scenario));
         initPageCollection();
     }
 
-    @BeforeClass(alwaysRun = true)
+    //@AfterClass(alwaysRun = true)
     public void tearDown(){
         if (getDriver().get().getSessionId() != null) {
             quitDriver();
