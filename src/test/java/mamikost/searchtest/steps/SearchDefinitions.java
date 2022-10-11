@@ -32,8 +32,8 @@ public class SearchDefinitions extends CommonDefinition {
         System.out.println("User get top 3 the lowest price of the border house");
     }
 
-    @After
-    public void dispathDriver(){
-        tearDown();
-    }
+    //@After
+    //public void dispathDriver(){
+    //    tearDown();
+    //}
 }

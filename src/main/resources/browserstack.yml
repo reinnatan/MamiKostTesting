@@ -1,5 +1,5 @@
 browserstack:
-  username :
-  api_key :
-  url :
-  appium_hub :
+  username : reinhartnatanael_5vXpVN
+  api_key : ud1YPYvJ8stDG237Rx3y
+  url : https://api-cloud.browserstack.com/app-automate/
+  appium_hub : '@hub-cloud.browserstack.com/wd/hub'

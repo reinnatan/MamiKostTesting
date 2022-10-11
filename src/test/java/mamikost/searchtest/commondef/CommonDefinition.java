@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import mamikost.config.DriverBuilderFactory;
 import mamikost.config.DriverType;
 import mamikost.page.PageCollection;
+import org.testng.annotations.BeforeClass;
 
 
 public class CommonDefinition {
@@ -19,6 +20,7 @@ public class CommonDefinition {
         initPageCollection();
     }
 
+    @BeforeClass(alwaysRun = true)
     public void tearDown(){
         if (getDriver().get().getSessionId() != null) {
             quitDriver();
