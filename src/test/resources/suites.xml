@@ -3,7 +3,7 @@
     <test name="Test Coba">
         <parameter name="bsLocalId" value="bsLocalId1"/>
         <packages>
-            <package name=""/>
+            <package name="mamikost.android"/>
         </packages>
     </test>
 </suite>
