@@ -1,4 +1,4 @@
-package mamikost.searchtest.steps;
+package mamikost.android.searchtest.steps;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -6,7 +6,7 @@ import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import mamikost.searchtest.commondef.CommonDefinition;
+import mamikost.android.searchtest.commondef.CommonDefinition;
 
 
 public class SearchDefinitions extends CommonDefinition {

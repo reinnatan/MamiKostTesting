@@ -1,4 +1,4 @@
-package mamikost.searchtest.runner;
+package mamikost.android.searchtest.runner;
 
 import io.cucumber.junit.Cucumber;
 import org.junit.runner.RunWith;
@@ -7,9 +7,9 @@ import io.cucumber.testng.CucumberOptions;
 
 
 @CucumberOptions(
-        features = {"src/test/java/mamikost/searchtest/features"},
+        features = {"src/test/java/mamikost/android/searchtest/features"},
         plugin = {"pretty", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},
-        glue = {"mamikost.searchtest"}
+        glue = {"mamikost.android.searchtest"}
 )
 
 //@RunWith(Cucumber.class)

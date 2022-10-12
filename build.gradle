@@ -42,3 +42,10 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+task smokeTest(type:Test){
+    useTestNG(){
+        useDefaultListeners = false
+        suites 'src/test/resources/suite.xml'
+    }
+}

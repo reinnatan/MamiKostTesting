@@ -1,4 +1,4 @@
-package mamikost.searchtest.commondef;
+package mamikost.android.searchtest.commondef;
 
 import io.appium.java_client.AppiumDriver;
 import io.cucumber.java.en.Then;
