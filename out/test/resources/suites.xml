@@ -1,9 +1,20 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="BiWeekly Automation Suite" verbose="1"  parallel="tests" thread-count="5">
-    <test name="Test Coba">
-        <parameter name="bsLocalId" value="bsLocalId1"/>
-        <packages>
-            <package name=""/>
-        </packages>
+    <listeners>
+        <listener class-name="mamikost.listener.NGTestListener"></listener>
+    </listeners>
+    <test name="Search Kost">
+        <classes>
+            <class name="mamikost.android.searchtest.runner.SearchRunner">
+            </class>
+        </classes>
     </test>
+
+    <test name="Click Required">
+        <classes>
+            <class name="mamikost.android.requiretest.runner.RequireRunner">
+            </class>
+        </classes>
+    </test>
+
 </suite>

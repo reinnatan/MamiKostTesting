@@ -4,6 +4,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
+
 import lombok.extern.slf4j.Slf4j;
 import mamikost.Utils.TestUtils;
 import org.openqa.selenium.*;
@@ -15,7 +16,6 @@ import java.time.Duration;
 import java.util.Arrays;
 
 
-@Slf4j
 public class BasePageAndroid extends BasePage {
 
     public BasePageAndroid(ThreadLocal<AppiumDriver> androidDriver) {
@@ -51,14 +51,14 @@ public class BasePageAndroid extends BasePage {
     }
 
     protected void setTextToElementByXpath(String locator, String text, Wait<WebDriver>... waitSupplied) {
-        log.info("Typing text " + text + " on element " + locator);
+        //log.info("Typing text " + text + " on element " + locator);
         Wait<WebDriver> tempWait = TestUtils.getFirstValueOr(waitSupplied, defaultWait);
         WebElement element = tempWait
                 .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
         clickAndWaitOnElement(locator, tempWait);
         element.clear();
         element.sendKeys(text);
-        log.info("typing text " + text + " on element " + locator + " with value=" + text + " is successful");
+        //log.info("typing text " + text + " on element " + locator + " with value=" + text + " is successful");
     }
 
     /**

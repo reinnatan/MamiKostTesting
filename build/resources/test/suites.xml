@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="BiWeekly Automation Suite" verbose="1"  parallel="tests" thread-count="5">
+    <listeners>
+        <listener class-name="mamikost.listener.NGTestListener"></listener>
+    </listeners>
+    <test name="Search Kost">
+        <classes>
+            <class name="mamikost.android.searchtest.runner.SearchRunner">
+            </class>
+        </classes>
+    </test>
+</suite>
